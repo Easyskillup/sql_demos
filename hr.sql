@@ -7,7 +7,7 @@ show databases;
 
 -- Creating tables for HR schema
 
-CREATE TABLE Employees (
+CREATE TABLE employees (
   employee_id int primary key,
   first_name varchar(40),
   last_name varchar(40) not null,
@@ -111,3 +111,4 @@ REFERENCES jobs(job_id);
 ALTER TABLE job_history ADD FOREIGN KEY (department_id) 
 REFERENCES departments(department_id);
 
+alter table employees add constraint unique (email);
